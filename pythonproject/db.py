@@ -1,6 +1,4 @@
-from flask import Flask
 import psycopg2 
-api = Flask(__name__)
 
 #connect to db
 
@@ -14,19 +12,14 @@ con = psycopg2.connect(
 #cursor
 cur = con.cursor()
 #execute query
+cur.execute("select id, name from things")
 
+rows = cur.fetchall()
 
+for r in rows:
+    print(f"id {r[0]} name{r[1]}")
 
-
-api = Flask(__name__)
-
-
-@api.route('/')
-def get_result():
-  return 'Hello World'
-
-
-@api.route('/db')
-def get_OtherResult():
-  return '(data!)'
-
+#close cursor
+cur.close()
+#close connection 
+con.close()

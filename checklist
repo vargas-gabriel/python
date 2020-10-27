@@ -2,4 +2,4 @@
 [x] Write a python program that makes use of 
     [x] variables, [x] functions, [x] arrays, [x] objects, [x] loops -- all the things!
 [x] Write an API server in python, that returns "Hello World" from a GET endpoint (Hint: use flask)
-[ ] Write an API server in python, that talks to a postgres DB, and returns DB rows via a GET endpoint (Hint: use psycopg)
+[] Write an API server in python, that talks to a postgres DB, and returns DB rows via a GET endpoint (Hint: use psycopg)
